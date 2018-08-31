@@ -6,7 +6,7 @@ import discord, platform, asyncio, time
 
 client = discord.Client()
 token = "enter your client token here"
-retarded_servers = ["filter out", "servers like this if you want want to post at them"]
+retarded_servers = ["filter out", "servers like this if you dont want to post at them"]
 annoying_channels = ["filter out", "channels like this if you dont want to post at them"]
 game_status = "enter your game status for the bot"
 
