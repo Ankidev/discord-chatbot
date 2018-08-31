@@ -4,6 +4,7 @@
 
 # chatbot.py requirements
 ```selenium```
+```firefox & geckodriver```
 
 # personalchatbot.py requirements
 ```chatterbot```
