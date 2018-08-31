@@ -1,3 +1,4 @@
+# Don't forget to edit the files\n
 # requirements
 - python3
 - discord.py
