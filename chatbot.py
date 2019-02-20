@@ -10,6 +10,14 @@ retarded_servers = ["filter out", "servers like this if you dont want to post at
 annoying_channels = ["filter out", "channels like this if you dont want to post at them"]
 game_status = "enter your game status for the bot"
 
+options = Options()
+options.set_headless(headless=True) 
+driver = webdriver.Firefox(firefox_options=options)
+driver.set_window_size(800, 600)
+driver.get("https://www.cleverbot.com/")
+print("Page load is successful.")
+time.sleep(2)
+
 @client.event
 async def on_ready():
     print('Authorization is successful.\n\nPython v{} | Discord.py v{} '.format(platform.python_version(), discord.__version__))
@@ -21,14 +29,6 @@ async def on_ready():
     for x in range(len(servers)):
         print(' ' + servers[x-1].name)
     await client.change_presence(game=discord.Game(name=game_status))
-
-options = Options()
-options.set_headless(headless=True) 
-driver = webdriver.Firefox(firefox_options=options)
-driver.set_window_size(800, 600)
-driver.get("https://www.cleverbot.com/")
-print("Page load is successful.")
-time.sleep(2)
 
 @client.event
 async def on_message(message):    
