@@ -6,7 +6,7 @@ import discord, platform, asyncio
 chatbot = ChatBot("AI")
 client = discord.Client()
 token = "enter your client token here"
-retarded_servers = ["filter out", "servers like this if you dont want to post at them"]
+annoying_servers = ["filter out", "servers like this if you dont want to post at them"]
 annoying_channels = ["filter out", "channels like this if you dont want to post at them"]
 game_status = "enter your game status for the bot"
 
@@ -34,7 +34,7 @@ async def on_message(message):
         server = ""
         channel = ""
 
-    if server in retarded_servers:
+    if server in annoying_servers:
         print(f"Access denied for server: {server}")
         return
     
